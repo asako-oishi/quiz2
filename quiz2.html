@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz - Responsive Design &amp; Media Queries</title>
+
+  <style type="text/css">
+    body {
+      font-size: 62.5%;
+      background: #eee;
+    }
+
+.list-item, .question {
+      margin-bottom: 1rem;
+        }
+
+.list {
+margin-top: 1rem;
+    }
+
+    .wrapper {
+      margin: 0 auto;
+      width: 300px;
+      border: 1px solid #333;
+      padding: 10px;
+      font-size: 1.2rem;
+      line-height: 133%;
+      background: #fff;
+      overflow: scroll;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+    }
+
+  .container {
+  background: #eee;
+  color: #111;
+  margin: 1.5em 2em;
+  padding: 1em 1em;
+  border: 2px solid #000;
+}
+
+  .answer {
+      display: block;
+      background: #466df2;
+      color: #fff;
+      padding: 0.5rem 1rem;
+        }
+
+  @media only screen and (min-width: 320px) {
+  .container {
+    margin: 2em;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .container {
+    padding: 1.1em 1.1em;
+  }
+}      
+
+    @media only screen and (min-width: 768px) {
+.wrapper {
+        font-size: 1.4rem;
+        width: 728px;
+        padding: 20px;
+
+    }
+    .container {
+    margin: 2.2em;
+    border: 2px solid #222;
+    padding: 1.2em 1.2em;
+  }
+
+}
+
+     @media only screen and (min-width: 1024px) {
+      .wrapper {
+        font-size: 1.6rem;
+      width: 984px;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+<section class="wrapper">
+  <header class="quiz-header">
+    <h1 class="h1">Quiz - Responsive Design &amp; Media Queries</h1>
+  </header>
+  <ol class="questions">
+    <li class="question">
+      True: Your base styles should target 320px and should reside inside a media query.
+
+      <span class="answer">True</span>
+    </li>
+    <li class="question">
+      False: You must re-define all styles, including those that aren't changing from the base styles, inside a media query.
+
+      <span class="answer">False</span>
+    </li>
+    <li class="question">
+      What meta tag do we need in conjunction with media queries?
+
+      <span class="answer">Meta tag identify Design Screen size.</span>
+    </li>
+    <li class="question">
+      What does this meta tag (the answer to # 3) do?
+
+      <span class="answer">Meta tag tells the media device to interpret the viewpoint/ browser width as the physical width of the mobile device in use.</span>
+    </li>
+    <li class="question">
+      What's better to use in media queries - max/min-width or max/min-device-width? Why?
+
+      <span class="answer">Max/min-width. max/min-device-width means the actual reslution of the device and max width  means the viewpoint area resolution. Width is more versatile when it comes to creating responsive webpages, though device-width is useful when you wish to specifically target mobile devices.</span>
+    </li>
+    <li class="question">
+      We've been using the "screen" media type in our media queries. What's another media type we could specify?
+
+      <span class="answer">print</span>
+    </li>
+    <li class="question">
+      You have 2 general options to deal with browsers that don't natively support media queries (*ahem* IE 8)? What are they?
+
+      <span class="answer">JQuery Media Queris plugin, and The Man in Blues</span>
+    </li>
+    <li class="question">
+      True or false: You should structure your HTML based on importance of content, not on the designs or media queries.
+
+      <span class="answer">True</span>
+    </li>
+    <li class="question">
+      Given the below code, what would the padding be for <strong>.container</strong> at the following screen sizes:
+
+      <span class="answer">
+        <ol class="list">
+          <li class="list-item"><strong>400px</strong> padding: 1em 1em;</li>
+          <li class="list-item"><strong>767px</strong> padding: 1.1em 1.1em</li>
+          <li class="list-item"><strong>1280px</strong> padding: 1.2em 1.2em</li>
+        </ol>
+      </span>
+
+    <li class="question">
+      Re-arrange the CSS in the head above to fit our preferred method of structuring responsive CSS, fixing errors and standardizing indentation along the way.
+    </li>
+  </ol>
+</section>
+
+</body>
+</html>
